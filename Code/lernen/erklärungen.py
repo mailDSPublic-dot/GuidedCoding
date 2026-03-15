@@ -1,0 +1,39 @@
+def erklärungen(level):
+    ausgabe = None
+    if level == "Datentypen": # Datentypen
+        ausgabe = """Datentypen beschreiben, welche Art von Wert in Python verwendet wird\nZ.B. Zahlen, Text oder Wahr/Falsch‑Werte.\nBeispiele dafür sind 25 als ganze Zahl (int), \n3.5 als Kommazahl (float), "Hallo" als Text (str) \nund True als Wahr/Falsch‑Wert (bool).\nSyntax:\n\nzahl = 25\n\nkommazahl = 2.5 \n\ntext = "Text"\n\nwahrheit = True\n\nMan kann auch Datentypen explizit verändern, \ndabei ist aber Vorsicht geboten, da es zu Fehlern kommen kann. \nstr(52) gibt z.B einen Text zurück, --> "52"\nwenn man aber schreibt int("eins") kommt es zu einem Fehler, \nda‚ 'eins' ist kein gültiger Zahlenwert ist."""
+    elif level == "Variablen": # Variablen
+        ausgabe = """Variablen sind Behälter für Werte, die du im Programm \nspeichern und später wieder verwenden kannst.\nDu gibst ihnen einfach einen Namen und weist ihnen einen Wert zu \nz.B. eine Zahl oder einen Text.\nSyntax:\n\nname = "Daniel"\n\nalter = 25\n\npreis = 4.99\n\nfertig = True"""
+    elif level == "print": # print
+        ausgabe = """print()  --> zeigt etwas auf dem Bildschirm an, damit der Nutzer sieht,\nwas das Programm ausgibt. Alles, was du in die Klammern schreibst,\nwird direkt angezeigt, beachte aber den Datentyp der Ausgabe.\nEs ist sozusagen die „Sprechblase“ deines Programms.\nSyntax: \n\nprint("Text")"""
+    
+    # Rechenoperationen
+    elif level == "Rechenoperatoren": # Rechenoperatoren
+        ausgabe = """Es gibt verschiedene mathematische Operatoren, welche für Zahlen, \nteilweise aber auch für Strings verwendet werden können\nEs gibt:\n\n+    # Addition\n-    # Subtraktion\n*    # Multiplikation\n/    # Division\n//     # Ganzzahlige Division\n%    # Modulo\n**    # Potenzierung"""
+    elif level == "Mathematische Rechenoperatoren": # Mathematische Rechenoperatoren
+        ausgabe = """Die Operatoren können wie im Taschenrechner zum rechnen \nbenutzt werden. Dazu schreibt man einfach eine Zahl, \neinen Rechenoperator und noch eine Zahl\nSyntax:\n\nergebnis = 35 + 7    # ergebnis = 42\n\nergebnis = 90 - 48    # ergebnis = 42\n\nergebnis = 7 * 6    # ergebis = 42\n\nergebnis = 126 / 3    # ergebnis = 42.0 (durch ergibt immer einen float)\n\nergebnis = 128 // 3    # ergebnis = 42 (schneidet ab, rundet nicht)\n\nergebnis = 192 % 50    # ergebnis = 42 (192 / 50 = 3 --> Rest 42)\n\nergebnis = 2 ** 6    # ergebnis = 64"""
+    elif level == "Rechenoperationen mit Strings": # Rechenoperatoren String
+        ausgabe = """Man kann auch + und * mit Strings rechnen.\nSyntax:\n\nergebnis = 3 * "Ich"    # ergebnis = "IchIchIch"\n\nergebnis = "Ich" + "Ich" + "Ich"    #     ergebnis = "IchIchIch" """
+    
+    elif level == "input": # input()
+        ausgabe = """input()  --> wartet darauf, dass der Nutzer etwas eingibt, \nbevor das Programm weiterläuft. Das, was der Nutzer tippt, \nwird als Text zurückgegeben und kann im Programm weiterverwendet werden. \nEs ist sozusagen die „Frage“ deines Programms an den Nutzer.\nSyntax: \nvariable = input("Bitte eingeben: ")"""
+    elif level == "if-Bedingung, else": # if else
+        ausgabe = """Eine if‑Bedingung prüft, ob eine Aussage wahr ist. \nNur dann wird der zugehörige Code ausgeführt.\nelse fängt den Fall ab, wenn die Bedingung nicht zutrifft, \nund führt dann eine alternative Anweisung aus. \nDamit kann dein Programm unterschiedlich reagieren, \nje nachdem, was gerade zutrifft.\nBeachte dabei, dass der Code, welcher ausgeführt werden soll\nmit Leerzeichen eingerückt werden muss. Der Standard ist, \ndass man 4 Leerzeichen vor den Code schreibt (einen Tabulator). \nEs gehen aber theoretisch beliebig viele, solange immer gleich \nviele benutzt werden Dadurch weiß das Programm, \nwelcher Codeblock zur Bedingung gehört.\nSyntax:\n\nif bedingung:\n    # Code\nelse:\n    #Code"""
+    elif level == "elif-Bedingung": # elif
+        ausgabe = """elif bedeutet „ansonsten, wenn diese andere Bedingung stimmt“. \nEs wird benutzt, wenn du mehr als zwei Fälle prüfen möchtest – \nalso eine zusätzliche Bedingung zwischen if und else. \nDamit kann dein Programm mehrere unterschiedliche Situationen \nnacheinander abfragen.\nAchte zudem wieder auf die Einrückung\nSyntax: \n\nif Bedingung:\n    #Code\nelif Bedingung:\n    #Code\nelse:\n    #Code"""
+    elif level == "while-Schleife": # while
+        ausgabe = """while führt einen Codeblock so lange wiederholt aus, \nwie die angegebene Bedingung wahr bleibt. \nDas bedeutet: Solange die Bedingung stimmt, \nläuft die Schleife immer weiter und springt danach wieder zum Anfang. \nDamit kannst du Abläufe bauen, die sich ständig wiederholen, \nbis etwas Bestimmtes passiert.\nAchte zudem wieder auf die Einrückung\nSyntax: \n\nwhile Bedingung:\n    #Code"""
+    elif level == "for-Schleife": # for
+        ausgabe = """for wiederholt einen Codeblock mehrmals, \nund mit "in range()" gibst du genau an, \nwie oft diese Wiederholung passieren soll. \n"in range()" erzeugt dabei eine Art Zählbereich, \nden die Schleife Schritt für Schritt durchläuft. \nSo kannst du z.B. sagen: „Mach das fünfmal“, \nohne etwas mehrfach hinschreiben zu müssen.\nDabei gilt es zu beachten, dass die letzte Zahl nicht mehr benutzt wird\nSo macht z.B. in range(1, 10) einen Bereich von 1 bis 9. \nAchte zudem wieder auf die Einrückung\nSyntax: \n\nfor variable in range(startzahl, endzahl):\n    #Code"""
+    
+    # Listen
+    elif level == "Listen Überblick": # Listen
+        ausgabe = """Listen sind Sammlungen von mehreren Werten in \neiner einzigen Variable. Sie werden durch [] definiert.\nSie können Zahlen, Texte oder gemischte Inhalte enthalten \nund lassen sich jederzeit verändern.\nSyntax:\n\nvariable = [1,2,3,4,5,6]\n\nvariable = ["Hallo", "ich", "bin", "User"]"""
+    elif level == "Listen-Zugriff": # Listen index, append, insert, for
+        ausgabe = """Der Zugriff auf Listen bedeutet, dass du einzelne Elemente \nüber ihre Position erreichst. Diese Position nennt man Index, \nund der beginnt in Python immer bei 0.\nSyntax:\n\nzahlen = [10, 20, 30, 40]\n\nerstes_element = zahlen[0]\n\nzweites_element = zahlen[1]\n\nletztes_element = zahlen[-1]   # - bedeutet hinten (zahlen[-2] = vorletztes Element)\n\nzahlen[2] = 9    # ersetzt das Element am Index 2 mit 9\n\nElemente lassen sich flexibel ergänzen. Entweder einzeln oder in Gruppen. \nDafür stehen dir Befehle wie append(), insert() und extend() zur Verfügung.\n\nzahlen.append(5) # fügt eine 5 am Ende hinzu\n\nzahlen.insert(1, 30) # fügt an Stelle 1 (2.Stelle) eine 30 ein\n\nzahlen.extend([4, 9]) # fügt am ende 4 und 9 hinzu"""
+    elif level == "Listen-Zugriff mit for": # Listen for
+        ausgabe = """Du kannst mit for nacheinander auf alle Items der Liste zugreifen.\nDabei bekommt eine Variable in jedem Durchgang den \nnächsten Eintrag zugewiesen. Dabei kann man z.B. für \njedes Item sich das quadrat ausgeben lassen.\nSyntax:\n\nzahlen = [1, 2, 3, 4, 5]\n\nfor variable in zahlen:\n\n    print(variable**2)"""
+    elif level == "Listen-Befehle": # Listen remove, pop, len, clear, sort
+        ausgabe = """Listenbefehle helfen dir dabei, Elemente zu entfernen, \nzu zählen oder die Reihenfolge zu ändern. \nMit remove() löschst du einen bestimmten Wert, \npop() schneidest du ein Element aus einer bestimmten Position \nheraus und kannst es weiter verwenden, \nclear() leert die gesamte Liste, sort() bringt die Werte in eine \ngeordnete Reihenfolge. Mit len() kannst du dir die Länge \nder Liste ausgeben lassen.(Das geht auch mit strings).\nSyntax:\n\nzahlen = [3, 1, 4, 1, 5]\n\nzahlen.remove(1)     # entfernt die erste 1\n\nwert = zahlen.pop(2)    # holt ein Element von Index 2 aus der Liste\n\nlaenge = len(zahlen)     # speichert die Länge der Liste\n\nzahlen.clear()     # leert die Liste komplett\n\nzahlen.sort()      # sortiert die Liste"""
+    
+    return ausgabe
